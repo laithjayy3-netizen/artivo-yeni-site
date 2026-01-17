@@ -1,0 +1,233 @@
+<header>
+  <div class="logo-container">
+    <img id="logo" src="https://www.raed.net/img?id=1386549" alt="Artivo Logo">
+    <span id="logoText">Artivo AI</span>
+  </div>
+  
+  <div class="nav-links">
+    <!-- قائمة الأدوات المنسدلة -->
+    <div class="tools-dropdown">
+      <button class="tools-btn">
+        <i class="fas fa-tools"></i>
+        <span>أدواتنا الذكية</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="tools-dropdown-content">
+        <a href="tools/text-to-image.html">
+          <i class="fas fa-image"></i> توليد الصور من النص
+        </a>
+        <a href="tools/chat-assistant.html">
+          <i class="fas fa-comments"></i> المساعد الذكي
+        </a>
+        <a href="tools/image-editor.html">
+          <i class="fas fa-edit"></i> تعديل الصور الذكي
+        </a>
+        <a href="tools/color-generator.html">
+          <i class="fas fa-palette"></i> مولد الألوان
+        </a>
+        <a href="tools/graphic-design.html">
+          <i class="fas fa-pen-nib"></i> تصميم الجرافيك
+        </a>
+        <a href="tools/3d-design.html">
+          <i class="fas fa-cube"></i> التصميم ثلاثي الأبعاد
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- زر القائمة للجوال -->
+  <button class="mobile-menu-toggle" id="mobileMenuToggle">
+    <i class="fas fa-bars"></i>
+  </button>
+  
+  <div class="user-section">
+    <!-- قسم اللغات -->
+    <div class="language-selector">
+      <div class="selected-language" id="selectedLanguage">
+        <img id="currentFlag" src="https://flagcdn.com/w20/sa.png" class="flag" alt="العربية">
+        <span id="currentLanguageText">العربية</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="language-dropdown" id="languageDropdown">
+        <a href="#" class="language-option" data-lang="ar">
+          <img src="https://flagcdn.com/w20/sa.png" class="flag" alt="العربية">
+          العربية
+        </a>
+        <a href="#" class="language-option" data-lang="en">
+          <img src="https://flagcdn.com/w20/gb.png" class="flag" alt="English">
+          English
+        </a>
+        <a href="#" class="language-option" data-lang="tr">
+          <img src="https://flagcdn.com/w20/tr.png" class="flag" alt="Türkçe">
+          Türkçe
+        </a>
+      </div>
+    </div>
+    
+    <!-- رابط الملف الشخصي للمستخدمين المسجلين -->
+    <a href="profile.html" id="profileLink" class="user-info" style="display: none;">
+      <img id="userPhoto" class="user-avatar" alt="صورة المستخدم">
+      <span id="userName" class="user-name">الملف الشخصي</span>
+    </a>
+    
+    <!-- نقاط المستخدم المسجل (8 نقاط) -->
+    <div id="coinsDisplay" class="coins-display" style="display: none;">
+      <i class="fas fa-coins"></i>
+      <span id="coinsCount">0</span>
+    </div>
+    
+    <!-- نقاط الزائر (2 نقطة) -->
+    <div id="visitorCoinsDisplay" class="coins-display" style="display: none;">
+      <i class="fas fa-coins"></i>
+      <span id="visitorCoinsCount">0</span>
+      <span id="visitorText" style="margin-left: 5px; font-size: 0.8rem;">(زائر)</span>
+    </div>
+    
+    <div class="auth-buttons">
+      <div id="authButtons" style="display: flex; gap: 10px;">
+        <button id="signInButton" class="auth-btn">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>تسجيل الدخول</span>
+        </button>
+        <button id="signUpButton" class="auth-btn">
+          <i class="fas fa-user-plus"></i>
+          <span>إنشاء حساب</span>
+        </button>
+      </div>
+      
+      <button id="signOutButton" class="auth-btn sign-out-btn" style="display: none;">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>تسجيل الخروج</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- قائمة الجوال المنسدلة -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-logo">
+    <img src="https://www.raed.net/img?id=1386549" alt="Artivo Logo">
+    <span>Artivo AI</span>
+  </div>
+  
+  <a href="index.html">
+    <i class="fas fa-home"></i> <span>الصفحة الرئيسية</span>
+  </a>
+  
+  <!-- قائمة الأدوات في الجوال -->
+  <div class="mobile-tools-section">
+    <a href="tools/text-to-image.html">
+      <i class="fas fa-image"></i> <span>توليد الصور من النص</span>
+    </a>
+    <a href="tools/chat-assistant.html">
+      <i class="fas fa-comments"></i> <span>المساعد الذكي</span>
+    </a>
+    <a href="tools/image-editor.html">
+      <i class="fas fa-edit"></i> <span>تعديل الصور الذكي</span>
+    </a>
+    <a href="tools/color-generator.html">
+      <i class="fas fa-palette"></i> <span>مولد الألوان</span>
+    </a>
+    <a href="tools/graphic-design.html">
+      <i class="fas fa-pen-nib"></i> <span>تصميم الجرافيك</span>
+    </a>
+    <a href="tools/3d-design.html">
+      <i class="fas fa-cube"></i> <span>التصميم ثلاثي الأبعاد</span>
+    </a>
+  </div>
+  
+  <!-- قسم اللغات في الجوال -->
+  <div class="mobile-language-section">
+    <div class="mobile-language-title">
+      <i class="fas fa-globe"></i> <span>اللغة</span>
+    </div>
+    <a href="#" class="mobile-language-option" data-lang="ar">
+      <img src="https://flagcdn.com/w20/sa.png" class="flag" alt="العربية">
+      العربية
+    </a>
+    <a href="#" class="mobile-language-option" data-lang="en">
+      <img src="https://flagcdn.com/w20/gb.png" class="flag" alt="English">
+      English
+    </a>
+    <a href="#" class="mobile-language-option" data-lang="tr">
+      <img src="https://flagcdn.com/w20/tr.png" class="flag" alt="Türkçe">
+      Türkçe
+    </a>
+  </div>
+  
+  <!-- رابط الملف الشخصي في قائمة الجوال -->
+  <a href="profile.html" id="mobileProfileLink" style="display: none;">
+    <i class="fas fa-user-circle"></i> <span>الملف الشخصي</span>
+  </a>
+  
+  <a href="#" id="mobileSignInLink">
+    <i class="fas fa-sign-in-alt"></i> <span>تسجيل الدخول</span>
+  </a>
+  <a href="#" id="mobileSignUpLink">
+    <i class="fas fa-user-plus"></i> <span>إنشاء حساب</span>
+  </a>
+  
+  <a href="#" id="mobileSignOutLink" style="display: none;">
+    <i class="fas fa-sign-out-alt"></i> <span>تسجيل الخروج</span>
+  </a>
+</div>
+
+<!-- نافذة تسجيل الدخول -->
+<div id="authModal" class="auth-modal">
+  <div class="auth-container">
+    <button class="close-btn" id="closeAuthModal">&times;</button>
+    
+    <div class="auth-tabs">
+      <div class="auth-tab active" data-tab="login" id="loginTab">تسجيل الدخول</div>
+      <div class="auth-tab" data-tab="signup" id="signupTab">إنشاء حساب</div>
+    </div>
+    
+    <form id="loginForm" class="auth-form active">
+      <div class="input-group-auth">
+        <label for="loginEmail">البريد الإلكتروني</label>
+        <input type="email" id="loginEmail" required>
+      </div>
+      
+      <div class="input-group-auth">
+        <label for="loginPassword">كلمة المرور</label>
+        <input type="password" id="loginPassword" required>
+      </div>
+      
+      <button type="submit" class="auth-submit-btn">
+        <span>تسجيل الدخول</span>
+      </button>
+      
+      <div class="auth-error" id="loginError"></div>
+    </form>
+    
+    <form id="signupForm" class="auth-form">
+      <div class="input-group-auth">
+        <label for="signupEmail">البريد الإلكتروني</label>
+        <input type="email" id="signupEmail" required>
+      </div>
+      
+      <div class="input-group-auth">
+        <label for="signupPassword">كلمة المرور</label>
+        <input type="password" id="signupPassword" required>
+      </div>
+      
+      <div class="input-group-auth">
+        <label for="signupConfirmPassword">تأكيد كلمة المرور</label>
+        <input type="password" id="signupConfirmPassword" required>
+      </div>
+      
+      <button type="submit" class="auth-submit-btn">
+        <span>إنشاء حساب</span>
+      </button>
+      
+      <div class="auth-error" id="signupError"></div>
+    </form>
+    
+    <div class="social-login">
+      <button id="googleLogin" class="auth-btn" style="width: 100%; margin-top: 15px;">
+        <i class="fab fa-google"></i>
+        <span>تسجيل الدخول باستخدام Google</span>
+      </button>
+    </div>
+  </div>
+</div>

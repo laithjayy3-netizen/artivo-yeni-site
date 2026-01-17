@@ -1,0 +1,184 @@
+/* assets/css/home.css */
+/* أنماط خاصة بالصفحة الرئيسية */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+#heroVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 17, 20, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  color: var(--text);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  background: linear-gradient(to right, var(--primary), var(--primary-dark));
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 45px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(42, 159, 214, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(42, 159, 214, 0.6);
+}
+
+.tools-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 أعمدة للكمبيوتر */
+  gap: 30px;
+}
+
+.tool-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tool-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  border-color: var(--primary);
+}
+
+.tool-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.tool-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.tool-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.tool-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.tool-link:hover {
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  .tools-grid {
+    grid-template-columns: 1fr; /* عمود واحد للجوال */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr); /* عمودين للأجهزة اللوحية */
+  }
+}

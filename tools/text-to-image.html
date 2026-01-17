@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artivo AI | توليد الصور من النص</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- روابط CSS -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/text-to-image.css">
+  
+  <!-- روابط JavaScript المشتركة -->
+  <script type="module" src="../assets/js/firebase-init.js"></script>
+  <script type="module" src="../assets/js/auth.js"></script>
+  <script type="module" src="../assets/js/user-points.js"></script>
+</head>
+<body>
+  <!-- تأثيرات الخلفية -->
+  <div class="background-effect" id="backgroundEffect"></div>
+  
+  <!-- سيتم تحميل الهيدر من ملف منفصل -->
+  <div id="header-container"></div>
+  
+  <!-- المحتوى الرئيسي -->
+  <div class="container">
+    <div class="card">
+      <h1>توليد الصور من النص</h1>
+      <p class="subtitle">صمم رؤيتك بالكلمات. اكتب وصفاً دقيقاً للتصميم الذي تريده وسيقوم الذكاء الاصطناعي بتحويل أفكارك إلى واقع مذهل.</p>
+      
+      <div class="input-group">
+        <textarea id="prompt" maxlength="2000" placeholder="مثال: غرفة نوم عصرية بإضاءة هادئة، أريكة فخمة في صالة معيشة واسعة..."></textarea>
+        <div class="char-count" id="charCount">2000 حرف متبقي</div>
+      </div>
+      
+      <button class="btn" id="generateBtn">
+        <i class="fas fa-magic"></i> <span>إنشاء التصميم</span>
+      </button>
+    </div>
+    
+    <div id="result">
+      <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>يتم الآن توليد التصميم، يرجى الانتظار...</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- نافذة نقاط الزائر المنتهية -->
+  <div id="visitorCoinsModal" class="coins-modal">
+    <div class="coins-container">
+      <button class="close-btn" id="closeVisitorModal">&times;</button>
+      <h2 id="visitorModalTitle">نقاطك المجانية انتهت!</h2>
+      <p id="visitorModalText">لقد استخدمت جميع نقاطك المجانية. سجل الدخول الآن للحصول على 8 نقاط مجانية كل شهر!</p>
+      <div class="coins-buttons">
+        <button id="modalSignInBtn" class="coins-btn">
+          <i class="fas fa-sign-in-alt"></i>
+          <span id="modalSignInText">تسجيل الدخول</span>
+        </button>
+        <button id="modalSignUpBtn" class="coins-btn">
+          <i class="fas fa-user-plus"></i>
+          <span id="modalSignUpText">إنشاء حساب جديد</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- نافذة نقاط المستخدم المنتهية -->
+  <div id="userCoinsModal" class="coins-modal">
+    <div class="coins-container">
+      <button class="close-btn" id="closeUserModal">&times;</button>
+      <h2 id="userModalTitle">نقاطك المجانية انتهت!</h2>
+      <p id="userModalText">لقد استخدمت جميع نقاطك المجانية لهذا الشهر. يمكنك طلب المزيد من النقاط مجاناً عبر التواصل معنا على واتساب.</p>
+      <div class="coins-buttons">
+        <a id="whatsappLink" href="https://wa.me/905424318166?text=أريد%20طلب%20المزيد%20من%20النقاط%20المجانية" target="_blank" class="coins-btn whatsapp-btn">
+          <i class="fab fa-whatsapp"></i>
+          <span id="whatsappText">طلب نقاط مجانية عبر واتساب</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- سيتم تحميل الفوتر من ملف منفصل -->
+  <div id="footer-container"></div>
+  
+  <!-- روابط JavaScript المشتركة -->
+  <script type="module" src="../assets/js/header.js"></script>
+  <script type="module" src="../assets/js/footer.js"></script>
+  <script type="module" src="../assets/js/main.js"></script>
+  <script type="module" src="../assets/js/text-to-image.js"></script>
+  <script type="module" src="../assets/js/languages.js"></script>
+</body>
+</html>

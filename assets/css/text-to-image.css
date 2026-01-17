@@ -1,0 +1,253 @@
+/* assets/css/text-to-image.css */
+/* أنماط خاصة بصفحة توليد الصور */
+.container {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border);
+  text-align: center;
+  margin-bottom: 30px;
+}
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 30px;
+  max-width: 600px;
+  line-height: 1.6;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.input-group {
+  width: 100%;
+  margin-bottom: 25px;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 1.1rem;
+  resize: vertical;
+  transition: all 0.3s ease;
+  font-family: 'Tajawal', sans-serif;
+}
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(42, 159, 214, 0.3);
+}
+.char-count {
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: 8px;
+}
+#result {
+  width: 100%;
+  min-height: 300px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+}
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top: 4px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.image-container {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 25px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border);
+}
+.image-container canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.download-btn {
+  background: var(--success);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 5px 15px rgba(119, 179, 0, 0.4);
+}
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(119, 179, 0, 0.6);
+}
+.download-message {
+  position: absolute;
+  bottom: 20px;
+  background: var(--success);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.download-message.show {
+  opacity: 1;
+}
+
+/* نافذة طلب النقاط */
+.coins-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+.coins-container {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border);
+  position: relative;
+  text-align: center;
+}
+.coins-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+.coins-container p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+.coins-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+.coins-btn {
+  background: linear-gradient(to right, var(--primary), var(--primary-dark));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.coins-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(42, 159, 214, 0.6);
+}
+.whatsapp-btn {
+  background: linear-gradient(to right, #25D366, #128C7E);
+}
+.whatsapp-btn:hover {
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 30px 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  textarea {
+    height: 120px;
+    padding: 15px;
+  }
+  
+  #result {
+    padding: 20px;
+  }
+  
+  .coins-container {
+    padding: 30px 20px;
+  }
+  
+  .coins-container h2 {
+    font-size: 1.6rem;
+  }
+  
+  .coins-container p {
+    font-size: 1rem;
+  }
+}

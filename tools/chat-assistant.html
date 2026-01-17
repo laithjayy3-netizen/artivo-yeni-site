@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artivo AI | المساعد الذكي للمصممين</title>
+  
+  <!-- روابط الخطوط والأيقونات -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- روابط CSS -->
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/chat-assistant.css">
+  
+  <!-- روابط JavaScript الأساسية -->
+  <script type="module" src="../assets/js/firebase-init.js"></script>
+  <script type="module" src="../assets/js/auth.js"></script>
+  <script type="module" src="../assets/js/user-points.js"></script>
+</head>
+<body>
+  <!-- تأثيرات الخلفية -->
+  <div class="background-effect" id="backgroundEffect"></div>
+  
+  <!-- سيتم تحميل الهيدر من ملف منفصل -->
+  <div id="header-container"></div>
+  
+  <!-- المحتوى الرئيسي -->
+  <div class="container">
+    <div class="card">
+      <h1>المساعد الذكي للمصممين</h1>
+      <p class="subtitle">تحدث مع مساعدنا الذكي للحصول على تصميمات معمارية مخصصة تناسب احتياجاتك</p>
+      
+      <!-- نافذة المحادثة -->
+      <div class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+          <!-- ستظهر الرسائل هنا -->
+        </div>
+        
+        <!-- منطقة إدخال النص -->
+        <div class="chat-input-container">
+          <textarea id="userInput" placeholder="اكتب رسالتك هنا..."></textarea>
+          <button id="sendButton" class="btn">
+            <i class="fas fa-paper-plane"></i>
+            <span>إرسال</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- سيتم تحميل الفوتر من ملف منفصل -->
+  <div id="footer-container"></div>
+  
+  <!-- روابط JavaScript -->
+  <script type="module" src="../assets/js/header.js"></script>
+  <script type="module" src="../assets/js/footer.js"></script>
+  <script type="module" src="../assets/js/main.js"></script>
+  <script type="module" src="../assets/js/chat-assistant.js"></script>
+  <script type="module" src="../assets/js/languages.js"></script>
+</body>
+</html>
